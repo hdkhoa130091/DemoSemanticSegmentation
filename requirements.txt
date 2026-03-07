@@ -42,6 +42,7 @@ requests==2.32.5
 requests-toolbelt==1.0.0
 SecretStorage==3.5.0
 shellingham==1.5.4
+tk==0.1.0
 tomlkit==0.14.0
 trove-classifiers==2026.1.14.14
 urllib3==2.6.3
