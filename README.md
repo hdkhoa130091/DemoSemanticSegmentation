@@ -1,17 +1,17 @@
 # 📡 RF Signal Semantic Segmentation (4G LTE & 5G NR)
 
-Dự án sử dụng Deep Learning để phân mảng phổ tín hiệu di động (Spectrogram) giúp nhận diện và phân loại tín hiệu 4G (LTE) và 5G (NR) theo thời gian thực.
+The project uses Deep Learning to perform mobile signal spectrum segmentation (Spectrogram) to identify and classify 4G (LTE) and 5G (NR) signals in real time.
 
 ## 📦 Model & Datasets
-Truy cập và tải theo model và dataset bên dưới:
+Download the model and dataset below:
 * **Models (.onnx, .pth, .tflite):** [Hugging Face Models](https://huggingface.co/hdkhoa130091/RF-Signal-Segmentation-4G-5G)
 * **Dataset (Spectrogram images):** [Hugging Face Dataset](https://huggingface.co/datasets/hdkhoa130091/LTENRSpectrogramVisualize)
 
-## 🛠 Cài đặt
-1. Clone dự án: `git clone https://github.com/hdkhoa130091/DemoSemanticSegmentation.git`
-2. Cài đặt thư viện: `pip install -r requirements.txt`
-3. Tải model từ link trên và đặt vào thư mục `models/`.
+## 🛠 Install & Setup
+1. Clone project: `git clone https://github.com/hdkhoa130091/DemoSemanticSegmentation.git`
+2. Install interpreter packages: `pip install -r requirements.txt`
+3. Move the model and unzip the dataset into the project folder.
 
-## 🚀 Chạy Demo
+## 🚀 Deprecated Demo
 * Phân mảng ảnh: `python ImageSegmentation.py`
 * Phân mảng màn hình thời gian thực: `python VideoSegmentation.py`
