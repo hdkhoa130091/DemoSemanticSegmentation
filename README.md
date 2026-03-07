@@ -4,7 +4,7 @@ The project uses Deep Learning to perform mobile signal spectrum segmentation (S
 
 ## 📦 Model & Datasets
 Download the model and the dataset below:
-* **Models (.onnx, .pth, .tflite):** [Hugging Face Models](https://huggingface.co/hdkhoa130091/RF-Signal-Segmentation-4G-5G)
+* **Models (.onnx):** [Hugging Face Models](https://huggingface.co/hdkhoa130091/RF-Signal-Segmentation-4G-5G)
 * **Dataset (Spectrogram images):** [Hugging Face Dataset](https://huggingface.co/datasets/hdkhoa130091/LTENRSpectrogramVisualize)
 
 ## 🛠 Install & Setup
