@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 import os
+import subprocess
 
 ZOOM_FACTOR = 2
 FONT_SCALE = 0.8
@@ -16,11 +17,18 @@ CLASS_COLORS = [
 MEAN = np.array([0.485, 0.456, 0.406])
 STD = np.array([0.229, 0.224, 0.225])
 #(1) Define Paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'model_spectrogram.onnx')
-IMG_PATH = os.path.join(BASE_DIR, 'image', 'archive', 'testSet', 'input', 'LTE_NR_frame_3.png')
-MASK_PATH = os.path.join(BASE_DIR, 'image', 'archive', 'testSet', 'label', 'LTE_NR_frame_3.png')
-# miou
+BASE_DIR = './archive'
+MODEL_PATH = os.path.join( 'models', 'model_spectrogram.onnx')
+
+result = subprocess.run(
+    ['zenity', '--file-selection', f'--filename={os.path.abspath(os.path.join(BASE_DIR, "testSet/input/"))}', '--title=Select Spectrogram Image'],
+    capture_output=True, text=True
+)
+IMG_PATH = result.stdout.strip()
+
+filename = os.path.basename(IMG_PATH)
+MASK_PATH = os.path.join(BASE_DIR, 'testSet', 'label', filename)
+
 def calculate_signal_miou(pred, target):
     ious = []
     for cls in [0, 1]:
