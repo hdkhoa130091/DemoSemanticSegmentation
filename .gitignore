@@ -1,0 +1,12 @@
+# Chặn các thư mục nặng
+image/
+models/
+SavedModelDir/
+.venv/
+.idea/
+__pycache__/
+
+*.zip
+*.rar
+*.onnx
+*.pth
