@@ -1,9 +1,9 @@
 # 📡 RF Signal Semantic Segmentation (4G LTE & 5G NR)
 
-The project uses Deep Learning to perform mobile signal spectrum segmentation (Spectrogram) to identify and classify 4G (LTE) and 5G (NR) signals in real time.
+The project uses Deep Learning to perform mobile signal spectrum segmentation (Spectrogram) to identify and classify 4G (LTE) and 5G (NR) signals.
 
 ## 📦 Model & Datasets
-Download the model and dataset below:
+Download the model and the dataset below:
 * **Models (.onnx, .pth, .tflite):** [Hugging Face Models](https://huggingface.co/hdkhoa130091/RF-Signal-Segmentation-4G-5G)
 * **Dataset (Spectrogram images):** [Hugging Face Dataset](https://huggingface.co/datasets/hdkhoa130091/LTENRSpectrogramVisualize)
 
