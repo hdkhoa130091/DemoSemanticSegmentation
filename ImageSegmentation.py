@@ -18,7 +18,7 @@ MEAN = np.array([0.485, 0.456, 0.406])
 STD = np.array([0.229, 0.224, 0.225])
 #(1) Define Paths
 BASE_DIR = './archive'
-MODEL_PATH = os.path.join( 'models', 'model_spectrogram.onnx')
+MODEL_PATH = './model_spectrogram.onnx'
 
 result = subprocess.run(
     ['zenity', '--file-selection', f'--filename={os.path.abspath(os.path.join(BASE_DIR, "testSet/input/"))}', '--title=Select Spectrogram Image'],
