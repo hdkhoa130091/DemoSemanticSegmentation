@@ -1,7 +1,7 @@
-# Sử dụng Python 3.13 cho đồ án
+# Sử dụng Python 3.13 theo đúng môi trường bạn đang học
 FROM python:3.13-slim
 
-# Sửa lỗi: Dùng libgl1 thay cho libgl1-mesa-glx vì bản cũ đã bị xóa
+# Cài đặt thư viện hệ thống (Đã cập nhật gói libgl1 để sửa lỗi)
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
@@ -12,12 +12,12 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Copy và cài đặt thư viện
+# Copy requirements và cài đặt thư viện
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy toàn bộ mã nguồn
+# Copy toàn bộ mã nguồn vào container
 COPY . .
 
-# Chạy app chính của bạn
+# Lệnh chạy app
 CMD ["python", "ImageSegmentation.py"]
