@@ -1,5 +1,6 @@
-archive/
-archive.zip
 .venv/
 __pycache__/
+archive/
+archive.zip
 *.ipynb
+.git/
